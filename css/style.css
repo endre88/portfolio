@@ -1,0 +1,315 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration:none;
+	text-align: center;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	box-sizing:border-box;
+}
+
+html{
+	  scroll-behavior: smooth;
+}
+
+
+
+/*------Own styles ----------*/
+
+
+/* --- Welcome and navbar */
+
+#top{
+	display:none;
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:40px;
+	right:40px;
+	cursor: pointer;
+	z-index:9999;
+	border:2px solid #444;
+	font-size:1.5rem;
+	background:rgb(2,33,234);
+	color:white;
+	line-height:50px;
+	text-align:center;
+}
+#top:hover{
+	background:rgb(2,33,134);
+}
+
+
+#welcome-section{
+	margin:0;
+	height:100vh;
+	background-color:rgba(100,174,240,1);
+}
+
+#welcome-section .welcome{
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);	
+	min-width:70%;
+	margin:auto;
+	display:block;
+	text-align:center;
+}
+.welcome h1,
+.welcome h3{
+	margin:.5rem;
+}
+
+.welcome h1{
+	font-size:2em;
+}
+.welcome h3{
+	color:green;
+	font-size:1.2rem;
+}
+
+
+#navbar{
+	position:fixed;
+	top: 0;
+	height:4rem;
+	background-color:rgba(100,174,240,1);
+	display:grid;
+	grid-template-columns:3fr 1fr 1fr 1fr;
+	text-align:center;
+	width:100%;
+	z-index:1;
+}
+
+#navbar a{
+	text-decoration:none;
+	color:black;
+	display:grid;
+	align-self:center;
+	text-align:center;
+
+}
+
+.about{
+		grid-column-start:2;
+	}
+
+
+
+/*------  Projects  -----------*/
+
+
+#projects{
+	
+}
+
+.project-tile img{
+	width:100%;
+	margin-bottom:.5rem;
+	border-bottom:2px solid rgba(50,60,200,.7);
+}
+
+.project-tile{
+	text-align:center;
+	width:40%;
+	max-width:400px;
+	min-width:300px;
+	margin:3em auto;
+	border:2px solid rgba(50,60,200,.7);
+	color:black;
+}
+
+.link{
+	display:block;
+	padding:0 0 .5rem 0;
+	color:rgba(50,60,200,.7);
+}
+
+#profile-link{
+	display:block;
+	margin:3rem auto;
+	font-weight:700;
+	text-align:center;
+	width:180px;
+	border:2px solid rgba(33,177,23,.6);
+	border-radius:3px;
+	padding:.7rem;
+	color:rgba(50,60,200,.7);
+	background-color:rgba(33,177,23,.2);
+}
+
+a:visited,
+a:hover{
+	color:rgba(50,60,200,.7);
+}
+
+#profile-link:hover{
+	color:rgba(33,177,23,.6);
+	background-color:rgb(228,241,254);
+}
+
+h2{
+	text-align:center;
+	font-size:2rem;
+	margin:3rem 0 1rem;
+	color:rgba(33,157,133,.8);
+
+}
+
+
+
+/*---------------   Contacts  --------------*/
+
+:root {
+  --vheight: 100vh; 
+}
+
+
+
+#contact{
+	height:var(--vheight);
+	margin:5rem 0 0;
+	background:rgba(2,211,44,.3);
+}
+
+.data{
+	font-size:2.5rem;
+	display:block;
+	padding-top:calc(var(--vheight)/6);
+}
+
+.contacts{
+	  margin-top: calc(var(--vheight)/6);
+	  border-radius: 100%;
+}
+
+.contacts a{
+	width:100px;
+	height:100px;
+	display: inline-block;
+	margin: 0 35px 45px 35px;
+	border-radius: 100%;
+	border: 2px solid #90C695;
+	line-height: 100px;
+}
+
+.data p{
+	font-size:1.3rem;
+	padding-top:.5rem;
+}
+
+
+/*----------  Footer----------*/
+
+.footer{
+	width:100%;
+	display:inline-block;
+	background:rgb(34,49,63);
+	min-height:6rem;
+	color:white;
+	font-size:1.2em;
+	line-height:50px;
+	padding:1rem;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 367px) {
+  /*    #contact{
+    min-height:1100px;
+  } */
+  .contacts a {
+    border: 2px solid #90C695;
+    border-radius: 0;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    line-height: normal;
+  }
+}
+
+@media (min-width:548){
+	
+}
+
+
+
+/*-------- Media Queries --------------*/
+
+@media (max-width:990px)  {
+	.about{
+		grid-column-start:1;
+	}
+	#navbar{
+		display:grid;
+		grid-template-columns:1fr 1fr 1fr;
+  		justify-content: space-evenly;
+		padding:0 5rem;
+	}
+	#navbar a{
+	}
+}
+
+@media (min-width:990px){
+	.all-projects{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	}
+	.project-tile{
+		
+	}
+}
+
+@media (min-width:1478px){
+	.all-projects{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+}
