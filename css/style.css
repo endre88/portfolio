@@ -154,6 +154,7 @@ html{
 
 .project-tile img{
 	width:100%;
+	min-height:170px;
 	margin-bottom:.5rem;
 	border-bottom:2px solid rgba(50,60,200,.7);
 }
